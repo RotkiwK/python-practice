@@ -24,7 +24,6 @@ satellites = [
     {"NAME": "GPS", "MEAN_MOTION": 2.0056}
 ]
 
-number_of_satellites = len(satellites)
-
-print(number_of_satellites, satellites[0]["NAME"])
-
+for satellite in satellites:
+    print(satellite["NAME"], round(altitude_from_mean_motion(satellite["MEAN_MOTION"]), 1), round(period_from_mean_motion(satellite["MEAN_MOTION"]), 1))
+    
