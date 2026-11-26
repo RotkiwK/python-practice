@@ -25,5 +25,9 @@ satellites = [
 ]
 
 for satellite in satellites:
-    print(satellite["NAME"], round(altitude_from_mean_motion(satellite["MEAN_MOTION"]), 1), round(period_from_mean_motion(satellite["MEAN_MOTION"]), 1))
+    satellite["ALTITUDE_KM"] = altitude_from_mean_motion(satellite["MEAN_MOTION"])
+    satellite["PERIOD_MIN"] = period_from_mean_motion(satellite["MEAN_MOTION"])
+    print(satellite["NAME"], round(satellite["ALTITUDE_KM"], 1), round(satellite["PERIOD_MIN"], 1))
+
+print(satellites[0])
     
