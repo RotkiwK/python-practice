@@ -16,7 +16,15 @@ def period_from_mean_motion(mean_motion):
     period = MINUTES_PER_DAY / mean_motion
     return period
 
+satellites = [
+    {"NAME": "ISS", "MEAN_MOTION": 15.50},
+    {"NAME": "Hubble", "MEAN_MOTION": 15.09},
+    {"NAME": "Tiangong", "MEAN_MOTION": 15.60},
+    {"NAME": "NOAA-20", "MEAN_MOTION": 14.19},
+    {"NAME": "GPS", "MEAN_MOTION": 2.0056}
+]
 
-print(round (period_from_mean_motion(15.5),1))
+number_of_satellites = len(satellites)
 
+print(number_of_satellites, satellites[0]["NAME"])
 
